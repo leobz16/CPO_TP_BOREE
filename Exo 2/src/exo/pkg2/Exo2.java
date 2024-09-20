@@ -1,5 +1,7 @@
 package exo.pkg2;
 
+import java.util.Scanner;
+
 /*
  * BOREE Léo TDC 17/09/2024
  */
@@ -14,8 +16,10 @@ public class Exo2 {
         int nb; // nombre d'entiers à additionner
         int result; // résultat
         int ind; // indice
-        
-        nb = 5;
+        //nb=5;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("\n Entrer le nombre :");
+        nb=sc.nextInt(); // On demande a sc de donner le prochain entier
         result = 0;
         
         // Addition des nb premiers entiers
@@ -28,5 +32,6 @@ public class Exo2 {
         // Affichage du résultat
         System.out.println();
         System.out.println("La somme des " + nb + " entiers est: " + result);
+       
     }
 }
