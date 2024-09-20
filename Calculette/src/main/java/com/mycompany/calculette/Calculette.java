@@ -7,11 +7,25 @@ package com.mycompany.calculette;
 
 /**
  *
- * @author leoboree
+ * BOREE Léo TDC 20/09/2024
  */
 public class Calculette {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        int nb; // nombre d'entiers à additionner
+
+        System.out.println("\n Please enter the operator: ");
+        System.out.println("\n 1) add ");
+        System.out.println("\n 2) substract ");
+        System.out.println("\n 3) multiply ");
+        System.out.println("\n 4) divide ");
+        System.out.println("\n 5) modulo ");
+        nb=sc.nextInt(); // On demande a sc de donner le prochain entier
+
+
+
+
+
+
     }
 }
