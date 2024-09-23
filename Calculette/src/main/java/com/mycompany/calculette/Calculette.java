@@ -57,34 +57,21 @@ public class Calculette {
             result = first-second;
            System.out.println("The result is :"+result+"");
 
-       
-
         }
  
     if (operateur == 3){
-
             result = first*second;
-
             System.out.println("The result is :"+result+"");
-
-       
 
     }
 
     if (operateur == 4){
-
             result = first/second;
-
             System.out.println("The result is :"+result+"");
 
-       
-
         }
-
     if (operateur == 5){
-
             result = first%second;
-
             System.out.println("The result is :"+result+"");
 
         }
