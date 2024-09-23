@@ -20,33 +20,33 @@ public class TP1_manipNombresint_BOREE {
     Scanner sc = new Scanner(System.in);
 
        // initialisation de toutes les variables du code
-       int nb1;
-       int nb2;
+       int nbre1;
+       int nbre2;
        int somme;
        int produit;
-       int differance;
+       int difference;
        int division;
        int divisionmod;
        //demande des saisie des 2 nombre
 
        System.out.println("saisir 2 nombre ");
-       nb1=sc.nextInt();
-       nb2=sc.nextInt();
+       nbre1=sc.nextInt();
+       nbre2=sc.nextInt();
        
-        System.out.println("le premier nombre est "+nb1+" et le second est "+nb2);
+        System.out.println("le premier nombre est "+nbre1+" et le second est "+nbre2);
 
         // clacule de la somme, du produit et de la differance
-        somme = nb1+nb2;
-        produit = nb1*nb2;
-        differance = nb1-nb2;
+        somme = nbre1+nbre2;
+        produit = nbre1*nbre2;
+        difference = nbre2-nbre1;
 
         System.out.println("la somme de ses deux nombre est : "+somme);
         System.out.println("le produit de ses deux nombre est : "+produit);
-        System.out.println("la differance de ses deux nombre est : "+differance);
+        System.out.println("la differance de ses deux nombre est : "+difference);
          // clacule de la division euclidiene
 
-        division = nb1/nb2;
-        divisionmod = nb1%nb2;
+        division = nbre1/nbre2;
+        divisionmod = nbre1%nbre2;
         System.out.println("le quotient entier de la division euclidienne est : "+division+" est sont reste est :"+divisionmod);
 
     }
