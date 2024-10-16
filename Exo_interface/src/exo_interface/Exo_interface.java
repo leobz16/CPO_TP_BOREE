@@ -14,6 +14,8 @@ public class Exo_interface {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        fenetre1 f = new fenetre1();
+        f.show();
         // TODO code application logic here
     }
     
