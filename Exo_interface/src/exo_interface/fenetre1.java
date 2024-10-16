@@ -26,21 +26,102 @@ public class fenetre1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        texteindicatif = new javax.swing.JLabel();
+        Monbouton = new javax.swing.JButton();
+        Saisir = new javax.swing.JTextField();
+        resultat = new javax.swing.JLabel();
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        texteindicatif.setBackground(new java.awt.Color(255, 255, 255));
+        texteindicatif.setForeground(new java.awt.Color(102, 153, 255));
+        texteindicatif.setText("Ton nom est:");
+
+        Monbouton.setForeground(new java.awt.Color(255, 255, 0));
+        Monbouton.setText("Suivant");
+        Monbouton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MonboutonActionPerformed(evt);
+            }
+        });
+
+        Saisir.setText("reponse");
+        Saisir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaisirActionPerformed(evt);
+            }
+        });
+
+        resultat.setBackground(new java.awt.Color(255, 255, 255));
+        resultat.setForeground(new java.awt.Color(255, 51, 102));
+        resultat.setText("Resultat");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(113, 113, 113)
+                        .addComponent(texteindicatif)
+                        .addGap(36, 36, 36)
+                        .addComponent(Saisir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(Monbouton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(132, 132, 132)
+                        .addComponent(resultat, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(texteindicatif)
+                    .addComponent(Saisir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(58, 58, 58)
+                .addComponent(Monbouton)
+                .addGap(36, 36, 36)
+                .addComponent(resultat, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void SaisirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaisirActionPerformed
+       
+    }//GEN-LAST:event_SaisirActionPerformed
+
+    private void MonboutonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonboutonActionPerformed
+        // TODO add your handling code here:
+       String prenom;
+       prenom = Saisir.getText();
+       resultat.setText("bonjour " + prenom);
+    }//GEN-LAST:event_MonboutonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +159,12 @@ public class fenetre1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Monbouton;
+    private javax.swing.JTextField Saisir;
+    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel resultat;
+    private javax.swing.JLabel texteindicatif;
     // End of variables declaration//GEN-END:variables
 }
