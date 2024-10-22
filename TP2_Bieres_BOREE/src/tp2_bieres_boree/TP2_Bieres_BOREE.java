@@ -4,17 +4,51 @@
  */
 package tp2_bieres_boree;
 
-/**
- *
- * @author leoboree
- */
-public class TP2_Bieres_BOREE {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public class BouteilleBiere {
+
+    String nom;
+    float degreAlcool;
+    String brasserie; 
+    boolean ouverte;
+
+    public BouteilleBiere(String unNom, float unDegre, String uneBrasserie) {
+        nom = unNom;
+        degreAlcool = unDegre;
+        brasserie = uneBrasserie;
+        ouverte = false;
+       
     }
-    
+
+    public void lireEtiquette() {
+
+        System.out.println("Bouteille de " + nom + " (" + degreAlcool
+                + " degres) \nBrasserie : " + brasserie);
+
+    }
+
+    public boolean Decapsuler() {
+        if (ouverte) {
+            System.out.println("Erreur : bière déjà ouverte");
+            return false;
+        } else {
+            ouverte = true;
+            System.out.println("La biere " + nom + " est maintenant ouverte.");
+            return true;
+        }
+
+    }
+
+    @Override
+    public String toString() {
+        String chaine_a_retourner;
+        chaine_a_retourner = nom + " (" + degreAlcool + " degres)Ouverte ? ";
+        if (ouverte == true) {
+            chaine_a_retourner += "oui";
+        } else {
+            chaine_a_retourner += "non";
+        }
+        return chaine_a_retourner;
+    }
+
 }
