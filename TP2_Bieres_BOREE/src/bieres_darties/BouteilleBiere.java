@@ -12,8 +12,7 @@ public class BouteilleBiere {
     String nom ;
     float degreAlcool ;
     String brasserie ;
-    bool ouverte ;
-    
+    boolean ouverte ;    
     public void lireEtiquette() {
     System.out.println("Bouteille de " + nom +" (" + degreAlcool +  " degres) \nBrasserie : " + brasserie ) ;
 
