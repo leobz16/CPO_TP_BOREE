@@ -15,6 +15,19 @@ public class TP2_convertisseurObjet_BOREE {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Convertisseur Convertisseur1 = new Convertisseur();
+        
+        Convertisseur1.CelciusVersKelvin(1);
+        Convertisseur1.KelvinVersCelcius(1);
+        Convertisseur1.FarenheitVersCelcius(1);
+        Convertisseur1.CelciusVersFarenheit(1);
+        Convertisseur1.KelvinVersFarenheit(1);
+        Convertisseur1.FarenheitVersKelvin(1);
+        System.out.println(Convertisseur1);
+
+
+        
+
     }
     
 }

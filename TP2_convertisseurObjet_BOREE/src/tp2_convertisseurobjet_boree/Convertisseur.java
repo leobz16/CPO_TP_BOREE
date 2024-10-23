@@ -1,8 +1,10 @@
+package tp2_convertisseurobjet_boree;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package tp2_convertisseurobjet_boree;
+
 
 /**
  *
@@ -40,19 +42,19 @@ public class Convertisseur {
     public  double   KelvinVersFarenheit(double kelvin) {
         double celcius = KelvinVersCelcius ( kelvin);
         double farenheit = CelciusVersFarenheit(celcius);
-        nbConversions = nbConversions + 1;
+        nbConversions = nbConversions - 1;
         return farenheit;
      
     }
     public double FarenheitVersKelvin (double  Farenheit) {
          double celsius = FarenheitVersCelcius(Farenheit);
          double Kelvin = CelciusVersFarenheit(celsius);
-        nbConversions = nbConversions + 1;
+        nbConversions = nbConversions - 1;
          return Kelvin;
     }     
 @Override
 public String toString () {
- return "nb de conversions"+ nbConversions;
+ return "nb de conversions" + nbConversions;
 }
     
 }
