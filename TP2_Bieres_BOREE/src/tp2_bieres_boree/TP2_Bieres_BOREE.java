@@ -5,50 +5,48 @@
 package tp2_bieres_boree;
 
 
-public class BouteilleBiere {
+public class TP2_Bieres_BOREE {
 
-    String nom;
-    float degreAlcool;
-    String brasserie; 
-    boolean ouverte;
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
 
-    public BouteilleBiere(String unNom, float unDegre, String uneBrasserie) {
-        nom = unNom;
-        degreAlcool = unDegre;
-        brasserie = uneBrasserie;
-        ouverte = false;
-       
-    }
+        BouteilleBiere uneBiere = new BouteilleBiere("Bud", 5.0f, "Anheuser-Busch");
+        BouteilleBiere unesecondBiere = new BouteilleBiere("Chouffe", 8.0f, "Achouffe");
+        BouteilleBiere troisiemeBiere = new BouteilleBiere("1664", 5.5f, "Kronenbourg");
+        BouteilleBiere quatriemeBiere = new BouteilleBiere("86", 8.6f, "Royal Swinkels Family Brewers");
+        BouteilleBiere unecinquiemeBiere = new BouteilleBiere("Amsterdam la Maximator", 11.6f, "Saint-Omer");
 
-    public void lireEtiquette() {
+        uneBiere.lireEtiquette();
+        System.out.println();
 
-        System.out.println("Bouteille de " + nom + " (" + degreAlcool
-                + " degres) \nBrasserie : " + brasserie);
+        unesecondBiere.lireEtiquette();
+        System.out.println();
 
-    }
+        troisiemeBiere.lireEtiquette();
+        System.out.println();
 
-    public boolean Decapsuler() {
-        if (ouverte) {
-            System.out.println("Erreur : bière déjà ouverte");
-            return false;
-        } else {
-            ouverte = true;
-            System.out.println("La biere " + nom + " est maintenant ouverte.");
-            return true;
-        }
+        quatriemeBiere.lireEtiquette();
+        System.out.println();
 
-    }
+        unecinquiemeBiere.lireEtiquette();
 
-    @Override
-    public String toString() {
-        String chaine_a_retourner;
-        chaine_a_retourner = nom + " (" + degreAlcool + " degres)Ouverte ? ";
-        if (ouverte == true) {
-            chaine_a_retourner += "oui";
-        } else {
-            chaine_a_retourner += "non";
-        }
-        return chaine_a_retourner;
+        System.out.println();
+
+        BouteilleBiere unesisiemeBiere = new BouteilleBiere("Snake Venom", 10.0f, "Brewmeister");
+        BouteilleBiere uneseptiemeBiere = new BouteilleBiere("Desperados", 10.0f, "Caulier");
+        BouteilleBiere unehuitiemebiere = new BouteilleBiere("heineken", 10.0f, "Caulier");
+
+        unesisiemeBiere.Decapsuler();
+        uneseptiemeBiere.Decapsuler();
+
+        System.out.println();
+
+        System.out.println(unesisiemeBiere);
+        System.out.println(uneseptiemeBiere);
+        System.out.println(unehuitiemebiere);
+
     }
 
 }
