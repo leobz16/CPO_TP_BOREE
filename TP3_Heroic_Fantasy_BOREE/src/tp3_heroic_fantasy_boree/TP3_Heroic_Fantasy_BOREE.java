@@ -3,13 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package tp3_heroic_fantasy_boree;
+import Arme.Epee;
+import Arme.Baton;
+import Arme.Arme;
 
-/**
- *
- * @author leoboree
- */
+import java.util.ArrayList;
+
 public class TP3_Heroic_Fantasy_BOREE {
-
 
     public static void main(String[] args) {
         // Création de 2 épées
@@ -20,10 +20,26 @@ public class TP3_Heroic_Fantasy_BOREE {
         Baton baton1 = new Baton("Chêne", 4, 5);
         Baton baton2 = new Baton("Charme", 5, 6);
 
-        // Affichage des objets
-        System.out.println(epee1);  // Affiche les détails de l'épée 1
-        System.out.println(epee2);  // Affiche les détails de l'épée 2
-        System.out.println(baton1); // Affiche les détails du bâton 1
-        System.out.println(baton2); // Affiche les détails du bâton 2
+        // Création d'un ArrayList pour stocker les armes
+        ArrayList<Arme> armes = new ArrayList<>();
+        armes.add(epee1);
+        armes.add(epee2);
+        armes.add(baton1);
+        armes.add(baton2);
+
+        // Affichage des caractéristiques des armes
+        System.out.println("Armes :");
+        for (Arme arme : armes) {
+            System.out.println(arme);  // Affiche les détails de l'arme
+        }
+
+        // Création de personnages
+        Magicien magicien = new Magicien("Merlin", 100, true);
+        Guerrier guerrier = new Guerrier("Arthur", 120, false);
+
+        // Affichage des personnages
+        System.out.println("\nPersonnages :");
+        System.out.println(magicien);  // Affiche les détails du magicien
+        System.out.println(guerrier);  // Affiche les détails du guerrier
     }
 }
