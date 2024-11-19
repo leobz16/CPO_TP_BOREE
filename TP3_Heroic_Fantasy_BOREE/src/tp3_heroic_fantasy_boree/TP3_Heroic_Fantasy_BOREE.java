@@ -7,13 +7,13 @@ package tp3_heroic_fantasy_boree;
 import Personnages.Guerrier;
 import Personnages.Magicien;
 import Personnages.Personnage;
-import arme.epee;
-import arme.baton;
-import arme.arme;
+import arme.Epee;
+import arme.Baton;
+import arme.Arme;
 import java.util.ArrayList;
 import Personnages.*;
 import arme.*;
-import tp3_heroic_fantasy_peron.EtreVivant;
+import tp3_heroic_fantasy_boree.EtreVivant;
 public class TP3_Heroic_Fantasy_BOREE {
 
     /**
@@ -22,10 +22,10 @@ public class TP3_Heroic_Fantasy_BOREE {
     public static void main(String[] args) {
 
         // Création des armes
-        epee excalibur = new epee("Excalibur", 7, 5);
-        epee durandal = new epee("Durandal", 4, 7);
-        baton chene = new baton("Chêne", 4, 5);
-        baton charme = new baton("Charme", 5, 6);
+        Epee excalibur = new Epee("Excalibur", 7, 5);
+        Epee durandal = new Epee("Durandal", 4, 7);
+        Baton chene = new Baton("Chêne", 4, 5);
+        Baton charme = new Baton("Charme", 5, 6);
 
         // Création des personnages
         Guerrier conan = new Guerrier("Conan", 78, true);
