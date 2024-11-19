@@ -3,9 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package tp3_heroic_fantasy_boree;
+import Personnages.Magicien;
+import Personnages.Guerrier;
 import Arme.Epee;
 import Arme.Baton;
 import Arme.Arme;
+import Personnages;
 
 import java.util.ArrayList;
 
@@ -34,8 +37,12 @@ public class TP3_Heroic_Fantasy_BOREE {
         }
 
         // Création de personnages
-        Magicien magicien = new Magicien("Merlin", 100, true);
-        Guerrier guerrier = new Guerrier("Arthur", 120, false);
+        Magicien magicien = new Magicien("Gandalf", 65, true);
+        Magicien magicien2 = new Magicien("Garcimore", 44, false);
+
+        Guerrier guerrier = new Guerrier("Conan", 78, false);
+        Guerrier guerrier2 = new Guerrier("Lannister", 45, true);
+
 
         // Affichage des personnages
         System.out.println("\nPersonnages :");
