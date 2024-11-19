@@ -3,50 +3,52 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package tp3_heroic_fantasy_boree;
-import Personnages.Magicien;
+
 import Personnages.Guerrier;
-import Arme.Epee;
-import Arme.Baton;
-import Arme.Arme;
-import Personnages;
-
+import Personnages.Magicien;
+import Personnages.Personnage;
+import arme.epee;
+import arme.baton;
+import arme.arme;
 import java.util.ArrayList;
-
+import Personnages.*;
+import arme.*;
+import tp3_heroic_fantasy_peron.EtreVivant;
 public class TP3_Heroic_Fantasy_BOREE {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        // Création de 2 épées
-        Epee epee1 = new Epee("Excalibur", 7, 5);
-        Epee epee2 = new Epee("Durandal", 4, 7);
 
-        // Création de 2 bâtons
-        Baton baton1 = new Baton("Chêne", 4, 5);
-        Baton baton2 = new Baton("Charme", 5, 6);
+        // Création des armes
+        epee excalibur = new epee("Excalibur", 7, 5);
+        epee durandal = new epee("Durandal", 4, 7);
+        baton chene = new baton("Chêne", 4, 5);
+        baton charme = new baton("Charme", 5, 6);
 
-        // Création d'un ArrayList pour stocker les armes
-        ArrayList<Arme> armes = new ArrayList<>();
-        armes.add(epee1);
-        armes.add(epee2);
-        armes.add(baton1);
-        armes.add(baton2);
+        // Création des personnages
+        Guerrier conan = new Guerrier("Conan", 78, true);
+        Magicien gandalf = new Magicien("Gandalf", 65, false);
 
-        // Affichage des caractéristiques des armes
-        System.out.println("Armes :");
-        for (Arme arme : armes) {
-            System.out.println(arme);  // Affiche les détails de l'arme
-        }
+        // Ajout d'armes
+        conan.ajouterArme(excalibur);
+        conan.ajouterArme(durandal);
+        gandalf.ajouterArme(chene);
+        gandalf.ajouterArme(charme);
 
-        // Création de personnages
-        Magicien magicien = new Magicien("Gandalf", 65, true);
-        Magicien magicien2 = new Magicien("Garcimore", 44, false);
+        // Equipement
+        conan.equiperArme("Excalibur");
+        gandalf.equiperArme("Chêne");
 
-        Guerrier guerrier = new Guerrier("Conan", 78, false);
-        Guerrier guerrier2 = new Guerrier("Lannister", 45, true);
+        // Combat
+        System.out.println("\nDébut du combat !");
+        conan.attaquer(gandalf);
+        gandalf.attaquer(conan);
 
-
-        // Affichage des personnages
-        System.out.println("\nPersonnages :");
-        System.out.println(magicien);  // Affiche les détails du magicien
-        System.out.println(guerrier);  // Affiche les détails du guerrier
+        // Affichage des résultats
+        System.out.println("\nÉtat des personnages :");
+        System.out.println(conan);
+        System.out.println(gandalf);
     }
 }

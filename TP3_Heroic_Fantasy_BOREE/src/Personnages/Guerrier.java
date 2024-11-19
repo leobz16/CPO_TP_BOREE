@@ -4,32 +4,36 @@
  */
 package Personnages;
 
+import Personnages.Personnage;
+
 /**
  *
- * @author leoboree
+ * @author eliot
  */
 public class Guerrier extends Personnage {
-    private boolean estAcheval;
 
-    // Constructeur
-    public Guerrier(String nom, int niveauVie, boolean estAcheval) {
+    private boolean aCheval;
+
+    // Constructeur pour initialiser Guerrier avec nom, niveau de vie et s'il est à cheval
+    public Guerrier(String nom, int niveauVie, boolean aCheval) {
         super(nom, niveauVie);
-        this.estAcheval = estAcheval;
+        this.aCheval = aCheval;
     }
 
-    // Getter pour estAcheval
-    public boolean isEstAcheval() {
-        return estAcheval;
+    // Getter pour savoir si le guerrier est à cheval
+    public boolean isACheval() {
+        return aCheval;
     }
 
-    // Setter pour estAcheval
-    public void setEstAcheval(boolean estAcheval) {
-        this.estAcheval = estAcheval;
+    // Setter pour modifier l'état "à cheval"
+    public void setACheval(boolean aCheval) {
+        this.aCheval = aCheval;
     }
 
-    // Redéfinition de toString pour afficher les détails du guerrier
+    // Redéfinition de toString pour inclure le statut "à cheval"
     @Override
     public String toString() {
-        return super.toString() + ", À cheval: " + estAcheval;
+        return super.toString() + ", aCheval=" + aCheval + '}';
     }
+
 }
